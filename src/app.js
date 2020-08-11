@@ -4,7 +4,8 @@ const express=require('express')
 const { dirname } = require('path')
 const { fdatasync } = require('fs')
 const app=express()
-
+//for heroku
+const port = process.env.PORT || 3000
 //from weather app
 const geocode=require("./utils/geocode.js")
 const forecast=require("./utils/forecast.js")
@@ -102,6 +103,6 @@ res.render('404',{
 
 
 
-app.listen(3000,()=>{
-    console.log('server up and running on port:3000')
+app.listen(port,()=>{
+    console.log('server up and running on port :' +port)
 })
