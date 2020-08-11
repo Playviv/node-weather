@@ -9,7 +9,7 @@ const forecast=(latitude,longitude,callback)=>{
             callback('please try other search ',undefined)
         }
         else{
-            callback(undefined,' Temperature is '+body.current.temperature +'°C .The apparent temperature is '+body.current.feelslike +'°C.')
+            callback(undefined,' Temperature is '+body.current.temperature +'°C .The apparent temperature is '+body.current.feelslike +'°C. The humidity is '+body.current..weather_descriptions.humidity)
         }
     })
 }
